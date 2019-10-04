@@ -48,7 +48,7 @@ use bupy7\cropbox\CropboxWidget;
         //]);
         echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
             'class' => 'btn btn-success btn-crop hidden',
-            'onClick' => '$(".crop-image").addClass("hidden")',
+            'onClick' => '$(".btn-reset").removeClass("hidden");$(".crop-image,.btn-crop,.btn-scale-out,.btn-scale-in").addClass("hidden");',
         ]);
         echo Html::button('<i class="fa fa-repeat"></i> ' . CropboxWidget::t('Reset'), [
             'class' => 'btn btn-warning btn-reset hidden',
