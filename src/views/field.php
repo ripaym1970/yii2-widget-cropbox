@@ -46,6 +46,9 @@ use bupy7\cropbox\CropboxWidget;
         //echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
         //    'class' => 'btn btn-success btn-crop',
         //]);
+        echo Html::button('<i class="fa fa-trash"></i> ', [
+            'class' => 'btn btn-default delete-photo',
+        ]);
         echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
             'class' => 'btn btn-success btn-crop hidden',
             'onClick' => '$(".btn-reset").removeClass("hidden");$(".crop-image,.btn-crop,.btn-scale-out,.btn-scale-in").addClass("hidden");',
