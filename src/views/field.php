@@ -17,25 +17,7 @@ use bupy7\cropbox\CropboxWidget;
         }
         ?>
     </div>
-    <div class="btn-group">
-        <?php
-        //echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
-        //    'class' => 'btn btn-success btn-crop',
-        //]);
-        echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
-            'class' => 'btn btn-success btn-crop',
-        ]);
-        echo Html::button('<i class="fa fa-repeat"></i> ' . CropboxWidget::t('Reset'), [
-            'class' => 'btn btn-warning btn-reset',
-        ]);
-        echo Html::button('<i class="fa fa-minus"></i> ', [
-            'class' => 'btn btn-default btn-scale-out',
-        ]);
-        echo Html::button('<i class="fa fa-plus"></i> ', [
-            'class' => 'btn btn-default btn-scale-in',
-        ]);
-        ?>
-    </div>
+
     <div class="cropped-images-cropbox">
         <p>
             <?php 
@@ -56,6 +38,26 @@ use bupy7\cropbox\CropboxWidget;
         foreach ($croppedImagesUrl as $url) {
             echo Html::img($url, ['class' => 'img-thumbnail']);
         }
+        ?>
+    </div>
+
+    <div class="btn-group">
+        <?php
+        //echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
+        //    'class' => 'btn btn-success btn-crop',
+        //]);
+        echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
+            'class' => 'btn btn-success btn-crop',
+        ]);
+        echo Html::button('<i class="fa fa-repeat"></i> ' . CropboxWidget::t('Reset'), [
+            'class' => 'btn btn-warning btn-reset',
+        ]);
+        echo Html::button('<i class="fa fa-minus"></i> ', [
+            'class' => 'btn btn-default btn-scale-out',
+        ]);
+        echo Html::button('<i class="fa fa-plus"></i> ', [
+            'class' => 'btn btn-default btn-scale-in',
+        ]);
         ?>
     </div>
     <?php
