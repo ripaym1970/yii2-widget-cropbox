@@ -9,7 +9,6 @@ use bupy7\cropbox\CropboxWidget;
     <div class="plugin"></div>
     <div class="btn btn-primary btn-file">
         <?php
-        echo '<i class="glyphicon glyphicon-folder-open"></i> ' . CropboxWidget::t('Browse');
         if ($hasModel) {
             echo Html::activeFileInput($this->context->model, $this->context->attribute, $this->context->options);
         } else {
@@ -18,18 +17,23 @@ use bupy7\cropbox\CropboxWidget;
         ?>
     </div>
     <div class="btn-group">
-        <?= Html::button('<i class="glyphicon glyphicon-scissors"></i> ' . CropboxWidget::t('Crop'), [
+        <?php
+        echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
             'class' => 'btn btn-success btn-crop',
-        ]); ?>
-        <?= Html::button('<i class="glyphicon glyphicon-repeat"></i> ' . CropboxWidget::t('Reset'), [
+        ]);
+        echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
+            'class' => 'btn btn-success btn-crop',
+        ]);
+        echo Html::button('<i class="fa fa-repeat"></i> ' . CropboxWidget::t('Reset'), [
             'class' => 'btn btn-warning btn-reset',
-        ]); ?>
-        <?= Html::button('<i class="glyphicon glyphicon-minus"></i> ', [
+        ]);
+        echo Html::button('<i class="fa fa-minus"></i> ', [
             'class' => 'btn btn-default btn-scale-out',
-        ]); ?>
-        <?= Html::button('<i class="glyphicon glyphicon-plus"></i> ', [
+        ]);
+        echo Html::button('<i class="fa fa-plus"></i> ', [
             'class' => 'btn btn-default btn-scale-in',
-        ]); ?>
+        ]);
+        ?>
     </div>
     <div class="cropped-images-cropbox">
         <p>
