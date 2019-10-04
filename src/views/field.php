@@ -9,6 +9,7 @@ use bupy7\cropbox\CropboxWidget;
     <div class="plugin"></div>
     <div class="btn btn-primary btn-file">
         <?php
+        echo '<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse');
         if ($hasModel) {
             echo Html::activeFileInput($this->context->model, $this->context->attribute, $this->context->options);
         } else {
@@ -18,9 +19,9 @@ use bupy7\cropbox\CropboxWidget;
     </div>
     <div class="btn-group">
         <?php
-        echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
-            'class' => 'btn btn-success btn-crop',
-        ]);
+        //echo Html::button('<i class="fa fa-folder-open"></i> ' . CropboxWidget::t('Browse'), [
+        //    'class' => 'btn btn-success btn-crop',
+        //]);
         echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
             'class' => 'btn btn-success btn-crop',
         ]);
