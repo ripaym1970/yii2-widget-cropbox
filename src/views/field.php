@@ -47,7 +47,7 @@ use bupy7\cropbox\CropboxWidget;
         //    'class' => 'btn btn-success btn-crop',
         //]);
         echo Html::button('<i class="fa fa-trash"></i> ', [
-            'class' => 'btn btn-default delete-photo',
+            'class' => 'btn btn-default btn-del',
             'onClick' => '$(this).addClass("hidden")',
             'title' => 'Видалити фото профілю',
         ]);
