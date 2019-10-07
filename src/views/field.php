@@ -48,6 +48,8 @@ use bupy7\cropbox\CropboxWidget;
         //]);
         echo Html::button('<i class="fa fa-trash"></i> ', [
             'class' => 'btn btn-default delete-photo',
+            'onClick' => '$(this).addClass("hidden")',
+            'title' => 'Видалити фото профілю',
         ]);
         echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
             'class' => 'btn btn-success btn-crop hidden',
