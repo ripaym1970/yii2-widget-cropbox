@@ -48,16 +48,16 @@ use bupy7\cropbox\CropboxWidget;
         //]);
         echo Html::button('<i class="fa fa-trash"></i> ', [
             'class' => 'btn btn-default btn-del',
-            'onClick' => '$(this).addClass("hidden")',
+            //'onClick' => '$(this).addClass("hidden")',
             'title' => 'Видалити фото профілю',
         ]);
         echo Html::button('<i class="fa fa-scissors"></i> ' . CropboxWidget::t('Crop'), [
             'class' => 'btn btn-success btn-crop hidden',
-            'onClick' => '$(".btn-reset").removeClass("hidden");$(".crop-image,.btn-crop,.btn-scale-out,.btn-scale-in").addClass("hidden");',
+            //'onClick' => '$(".btn-reset").removeClass("hidden");$(".crop-image,.btn-crop,.btn-scale-out,.btn-scale-in").addClass("hidden");',
         ]);
         echo Html::button('<i class="fa fa-repeat"></i> ' . CropboxWidget::t('Reset'), [
             'class' => 'btn btn-warning btn-reset hidden',
-            'onClick' => '$(".crop-image,.btn-del").removeClass("hidden");$(".btn-reset").addClass("hidden");',
+            //'onClick' => '$(".crop-image,.btn-del").removeClass("hidden");$(".btn-reset").addClass("hidden");',
         ]);
         echo Html::button('<i class="fa fa-minus"></i> ', [
             'class' => 'btn btn-default btn-scale-out hidden',
